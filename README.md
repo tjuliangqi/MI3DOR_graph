@@ -1,4 +1,4 @@
-# 3D Model Recognition based on two layers Few-Shot Learning Network
+# Unsupervised Cross-media Graph Convolutional Network for 2D Image based 3D Model Retrieval
 
 Implementation of the paper:  Unsupervised Cross-media Graph Convolutional Network for 2D Image based 3D Model Retrieval.
 
@@ -9,24 +9,22 @@ With the rapid development of 3D construction technology, 3D models have been ap
 - We design a cross-modality graph model for 2D-image-based 3D model retrieval, which fully utilizes the visual information of the image and structural information of the 3D model to bridge the 2D image and 3D model;
 - We propose a novel unsupervised GCN model to align the feature distribution from different modalities. More specifically, we apply the GCN to update the descriptors according to the cross-media graph, which is designed to narrow the gap between them;
 - We conduct corresponding experiments on the MI3DOR dataset to evaluate the performance of our approach. The experimental results demonstrate the superiority of the proposed method.
-## 3. Databases
 
-in our approach, we converted the multiple datasets into a whole called meta-sets **D**, and divided each dataset into the training set and the test set. The organization of dataset is shown as Figure.1.
 
 ![](/pic/framework.png)
 
-## 4. Approach
+## 3. Approach
 - 1) Data processing: we extract the rendered views for each 3D model from different angles. We hope these rendered views can include as many angles as possible. The pre-trained CNN model \cite{efficentnet} is utilized to extract the visual feature vector for the 2D image and the rendered views.
 - 2) Graph Construction: this goal of this step is to utilize the visual similarity between the 2D image and rendered view to bridge the gap between image and 3D model. It directly influences the performance of graph embedding. Thus, we consider the visual similarity and structure similarity to build the graph.
 - 3) Graph Embedding: we apply the classic GCN model and introduce the correlation loss to generate the embeddings of nodes, which are used to compute the similarity between the 2D image and 3D model for retrieval problem.
 
-## 5. Authors
+## 4. Authors
 - Qi Liang
 - Qiang Li 
 - Weizhi Nie
 - An-An Liu
 - Yuting Su
 
-## 6. Usage
+## 5. Usage
 Run the train.sh.
 
